@@ -1,0 +1,87 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "plugin:jsdoc/recommended",
+    "plugin:prettier/recommended",
+    "plugin:cypress/recommended"
+  ],
+  "globals": {
+    "cy": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint", "jsdoc", "react-hooks", "cypress"],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": [
+      2,
+      {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    ],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "@typescript-eslint/explicit-function-return-type": [
+      "error",
+      {
+        "allowExpressions": true
+      }
+    ],
+    "jsdoc/require-jsdoc": [
+      "error",
+      {
+        "require": {
+          "ArrowFunctionExpression": true,
+          "ClassExpression": true,
+          "FunctionDeclaration": true,
+          "MethodDefinition": true,
+          "FunctionExpression": true
+        },
+        "contexts": ["TSInterfaceDeclaration"]
+      }
+    ],
+    "jsdoc/require-param-type": "off",
+    "jsdoc/require-returns-type": "off",
+    "jsdoc/require-returns-description": "error",
+    "jsdoc/require-param-description": "error",
+    "jsdoc/newline-after-description": "error",
+    "jsdoc/require-hyphen-before-param-description": "error",
+    "jsdoc/require-returns-check": "error",
+    "jsdoc/no-types": "error",
+    "jsdoc/require-description": "error",
+    "jsdoc/require-description-complete-sentence": "error",
+    "jsdoc/check-alignment": "error",
+    "jsdoc/require-param": "error",
+    "jsdoc/require-returns": "error",
+    "jsdoc/check-indentation": "error",
+    "jsdoc/check-syntax": "error",
+    "react/require-default-props": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  }
+}
