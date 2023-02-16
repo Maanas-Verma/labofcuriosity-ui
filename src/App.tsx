@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import logo from './logo.svg';
 import './App.scss';
-
-function App() {
+/**
+ * Main functiopnal component for the app.
+ *
+ * @returns - App component.
+ */
+function App(): ReactElement {
   return (
     <div className="App">
       <header className="App-header">
@@ -14,8 +18,7 @@ function App() {
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           Learn React
         </a>
       </header>
